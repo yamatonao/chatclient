@@ -55,7 +55,6 @@ int main(int argc,char *argv[]){
 
 void* readthreadfunction(void *p){
     int sock = *((int *)p);
-    //printf("read start \n");
     while(1){
         char buf[BUFSIZ];
         memset(buf, '\0', sizeof(buf));
@@ -63,5 +62,5 @@ void* readthreadfunction(void *p){
         printf("from server > %s",buf);
     }
     //never reach
-    pthread_exit(NULL);
+    //pthread_exit(NULL);
 }
